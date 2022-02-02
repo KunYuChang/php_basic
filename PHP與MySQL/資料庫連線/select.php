@@ -54,10 +54,30 @@ require_once 'db.php';
 
     if (!empty($datas)) {
         print_r($datas);
+    } else {
+        echo "查無資料";
     }
     ?>
 
+    <h3>使用foreach，以及ul li 列出查詢的結果</h3>
+    <div class="well well-sm">
+        <?php if (!empty($datas)) : ?>
+            <ul>
+                <?php foreach ($datas as $key => $row) : ?>
+                    <li>
+                        第<?php echo ($key + 1); ?>筆資料，帳號:<?php echo $row['username']; ?>，名字:<?php echo $row['name']; ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else : ?>
+            <p>查無資料</p>
+        <?php endif; ?>
+    </div>
 
+    <?php
+    // 結束mysql連線
+    mysqli_close($link);
+    ?>
 </body>
 
 </html>
