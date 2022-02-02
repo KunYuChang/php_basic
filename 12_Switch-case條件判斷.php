@@ -12,18 +12,19 @@ else
     echo "default";
 
 // ? Switch-case
-switch ($number) {
-    case 0:
-        echo "0";
+$userRole = 'editor';
+switch ($userRole) {
+    case 'admin':
+        echo 'admin';
         break;
-    case 1:
-        echo "1";
+    case 'editor':
+        echo 'editor';
         break;
-    case 2:
-        echo "2";
+    case 'user':
+        echo 'user';
         break;
     default:
-        echo "default";
+        echo 'Invalid role';
 }
 
 ?>

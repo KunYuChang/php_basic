@@ -45,6 +45,33 @@ foreach ($students as $student) {
     echo "數學成績 : " . $student["數學成績"] . "<br>";
 }
 
+
+$user = [
+    'name' => 'Gio',
+    'email' => 'gio@email.com',
+    'skills' => ['php', 'graphql', 'react']
+];
+
+// array裡面的array會出錯
+foreach ($user as $key => $value) {
+    echo $key . ': ' . $value . '<br>';
+}
+
+// 解法1. 使用 json_encode
+foreach ($user as $key => $value) {
+    echo $key . ': ' . json_encode($value) . '<br>';
+}
+
+
+// 解法2 implode
+foreach ($user as $key => $value) {
+    if (is_array($value)) {
+        $value = implode(',', $value);
+    }
+    echo $key . ': ' . $value . '<br>';
+}
+
+
 ?>
 
 

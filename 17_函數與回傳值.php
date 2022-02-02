@@ -1,13 +1,6 @@
 <?php
 
-// function printWebSiteTitle()
-// {
-//     echo "Progress Bar <br>";
-// }
-
-// printWebSiteTitle();
-
-
+// 函式 
 
 $student_list = [
     ["name" => "小明", "score" => "65"],
@@ -57,6 +50,24 @@ echo $hours;
 // 函數取得全域變數有兩種方法
 // (1) 使用 global
 // (2) 使用 參數
+
+// Create function to sum all numbers using ...$nums
+function allSum(...$nums)
+{
+    $total = 0;
+    foreach ($nums as $num) {
+        $total += $num;
+    }
+    return $total;
+}
+echo allSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+// Arrow functions (PHP 7.4)
+function sum(...$nums)
+{
+    return array_reduce($nums, fn ($carry, $n) => $carry + $n);
+}
+echo sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
 ?>
 
