@@ -1,32 +1,33 @@
 <?php
-$hi = 'hello';
-$learning = 'php';
-$teacher = '梁浩賢';
+$string1 = 'Hello';
+$string2 = 'World';
 $occupation = "全端網站開發。";
 
-// 跳脫字元 (Escape character)
-echo "<h2>我想打出\"\"號</h2>";
-echo "<h2>我想打出\$號</h2>";
-
 // 字串連接 (String concatenation)
-echo "<h2>$hi.", ".$learning</h2>";
+echo $string1 . " " . $string2; // print Hello World
 
-// 輸出變數雙引號和單引號區別
-// ❌ PHP 單引號 : 不會呈現變數內容，會將該變數名稱當成字串輸出。
-// ⭕ PHP 雙引號 : 可以夾帶變數，會將該變數名稱當成字串輸出。
+// 輸出變數雙引號和單引號區別 (single quote vs double quotes)
+// ❌ PHP 單引號 : 不會解析變數內容，會將該變數"名稱"輸出。
+// ⭕ PHP 雙引號 : 會解析變數內容，會將該變數"內容"輸出。
 // 若沒有用{}包起來，有可能會出現錯誤，因為變數後面加字串，會導致統判斷錯誤。
-echo "<h2>跟$teacher 學習$learning</h2>";
-echo '<h2>跟$teacher 學習$learning</h2>';
+$teacher = '梁浩賢';
+$learning = 'PHP';
+echo "跟{$teacher}學習{$learning}"; // 跟梁浩賢學習PHP
+echo '跟$teacher學習$learning';     // 跟$teacher學習$learning
+
+// 跳脫字元 (Escape character)
+echo 'They\'re Here';
+echo "我想打出\$號";
+
+// 使用 PHP 列印的時候，要注意單雙引號的使用
+echo '<img src="images/my_dog.jpg">';
+echo "<img src='images/my_dog.jpg'>";
 
 // 常見 PHP 字串功能 (內建函式)
 echo "字串長度: " . strlen("Hello");
 echo "字串長度: " . mb_strlen("在學Hello", 'utf-8');
 echo substr("Hello", 0, 2);
 echo mb_substr("全端網站開發", 0, 2, "utf-8");
-
-// 使用 PHP 列印的時候，要注意單雙引號的使用
-echo '<img src="images/my_dog.jpg">';
-echo "<img src='images/my_dog.jpg'>";
 
 // 大小寫轉換
 echo 'Uppercase first letter: ' . ucfirst($name) . '<br/>';
@@ -50,11 +51,6 @@ echo 'Trim spaces to the left: ' . "Hello" . ltrim("   World   ") . "!" . "<br/>
 echo 'Trim spaces to the right: ' . "Hello" . rtrim("   World   ") . "!" . "<br/>";
 echo '<hr/>';
 
-
-// PHP 除了使用 echo 還可以使用 print 來輸出內容，但是 print 效能較差、限制較多 
-
 ?>
 
 <a href="https://progressbar.tw/posts/155">字串 String</a>
-<br>
-<a href="05_數字介紹.php">下一篇</a>

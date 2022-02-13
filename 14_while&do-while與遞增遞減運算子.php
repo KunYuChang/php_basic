@@ -93,5 +93,3 @@ do {
 
 
 <a href="https://progressbar.tw/posts/192">while 與 do-while迴圈，補充遞增遞減運算子</a>
-<br>
-<a href="15_for_and_foreach.php"></a>

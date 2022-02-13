@@ -1,12 +1,14 @@
 <?php
 
-// PHP 單行註解方式1 (源自於C++)
+// PHP Single line comment 單行註解方式1 (源自於C++)
 
-# PHP 單行註解方式2 (源自於Linux Shell Scripts)
+# PHP Single line comment 單行註解方式2 (源自於Linux Shell Scripts)
 
 /**
+ *  PHP Mutiline comment
  *  PHP 多行註解 (源自於C)
  *  PHP 多行註解
+ * 
  */
 
 ?>
@@ -18,5 +20,3 @@
 </ul>
 
 <a href="https://progressbar.tw/posts/148">註解的寫法 Comment out</a>
-<br>
-<a href="03_變數.php">進入下一篇</a>

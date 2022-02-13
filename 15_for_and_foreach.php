@@ -12,6 +12,7 @@ while ($index < count($array)) {
 // ? 使用 for loop 更為簡潔
 // 對比之下，其實就可以出來"for loop"是"while loop"的語法糖
 // for 條件式裡面進行宣告在某些程式語言是不行的 (例如C語言)
+// @params - init ,condition, inc
 for ($index = 0; $index < count($array); $index++) {
     echo "姓名 :" . $array[$index] . "<br>";
 }
@@ -44,7 +45,6 @@ foreach ($students as $student) {
     echo "姓名 : " . $student["姓名"] . "<br>";
     echo "數學成績 : " . $student["數學成績"] . "<br>";
 }
-
 
 $user = [
     'name' => 'Gio',

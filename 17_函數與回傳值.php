@@ -1,6 +1,12 @@
 <?php
 
-// 函式 
+# FUNCTION - Block of code that can be repeatedly called
+
+/**
+ * Camel Case - myFunction()
+ * Lower Case - my_function()
+ * Pascal Case - MyFunction()
+ */
 
 $student_list = [
     ["name" => "小明", "score" => "65"],
@@ -73,5 +79,3 @@ echo sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
 
 
 <a href="https://progressbar.tw/posts/216">函數與回傳值</a>
-<br>
-<a href="18_函數的傳入值與預設值.php"></a>

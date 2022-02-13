@@ -36,5 +36,3 @@ printEnd();
 
 
 <a href="https://progressbar.tw/posts/218">全域變數與系統函數</a>
-<br>
-<a href="20_巢狀迴圈.php"></a>

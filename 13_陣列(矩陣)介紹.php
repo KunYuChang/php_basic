@@ -4,19 +4,12 @@
 // 2. 一個陣列可以儲放無限個值(實際上不可能，畢竟你的記憶體空間不是無上限的)
 // 3. 在PHP裡面陣列(array)與雜湊(hash table)是同一件事情
 
-// ? 索引陣列 Index Array
+##########################################################
+# 索引陣列 Index Array
+##########################################################
+
 $a = array('HTML', 'CSS', 'JS', 'PHP', 2022); // 早期的陣列宣告方式
-$b = ['HTML', 'CSS', 'JS', 'PHP', 2022]; // 現代的陣列宣告方式 (short array syntax)
-
-// 輸出整個陣列 (簡易型式)
-echo '<pre>';
-print_r($a);
-echo '</pre>';
-
-// 輸出整個陣列 (詳細型式)
-echo '<pre>';
-var_dump($a);
-echo '</pre>';
+$cars = ['Honda', 'Toyota', 'Ford']; // 現代的陣列宣告方式 (short array syntax)
 
 // 讀取陣列元素 (Get element by index)
 echo $a[0] . '<br>';
@@ -24,11 +17,17 @@ echo $a[0] . '<br>';
 // 設置陣列元素 (Set element by index)
 $a[2] = 'TS';
 
-// 加入元素 (Append element)
+// 加入元素 (Append element) : 於陣列尾加入元素
 $a[] = 'Project';
 
 // 陣列元素數量 (Print the length of the array)
 echo count($a);
+
+// 輸出整個陣列 
+echo '<pre>';
+print_r($a);  // 簡易型式
+var_dump($a); // 詳細型式
+echo '</pre>';
 
 // 確認陣列是否包含索引中元素
 isset($a[3]);
@@ -86,7 +85,9 @@ sort($fruits);
 rsort($fruits);
 
 
-// ? 關聯陣列 Associative array
+##########################################################
+# 關聯陣列 Associative array
+##########################################################
 
 // 這是一種 key-value store 鍵值儲存的行為
 // 其他程式語言不會此行為設計於陣列型態之中
@@ -138,11 +139,19 @@ var_dump(array_values($person)); // 顯示陣列的值
 ksort($person); // keys
 asort($person); // values
 
+##########################################################
+# 多維陣列 Multi-Dimensional
+##########################################################
 
+$cars = [
+    ['Honda', 100, 25],
+    ['Toyota', 100, 70],
+    ['Ford', 100, 35],
+];
+
+echo $cards[1][2]; // print 70 (Toyota的100台庫存已賣70台)
 ?>
 
 <a href="https://progressbar.tw/posts/174">陣列 Array (矩陣)介紹</a>
 <a href="https://progressbar.tw/posts/175">陣列的新增與刪除</a>
 <a href="https://progressbar.tw/posts/176">陣列與迴圈的關係</a>
-<br>
-<a href="14_while&do-while與遞增遞減運算子.php">下一篇</a>

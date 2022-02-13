@@ -1,9 +1,13 @@
+<a href="https://progressbar.tw/posts/147">PHP與Echo文章</a>;
+
 <?php
 
-echo '<a href="https://progressbar.tw/posts/147">PHP與Echo文章</a>';
-echo '<br>';
-echo '<a href="02_註解的寫法.php">進入下一篇</a>';
-// 結尾不建議使用關閉符號
+echo '使用echo顯示資料';
+print '使用print顯示資料';
 
-
-# PHP 語法 (syntax) 
+/**
+ * 1. 結尾不建議使用關閉符號
+ * 2. echo, print 都可以用來顯示資料於畫面上, 但在PHP的世界裡通常使用echo,因為速度較快
+ * 
+ * 
+ */

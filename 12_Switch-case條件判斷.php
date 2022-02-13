@@ -1,3 +1,4 @@
+<a href="https://progressbar.tw/posts/173">Switch-case 條件判斷</a>
 <?php
 
 // ? 前情提要 
@@ -28,9 +29,3 @@ switch ($userRole) {
 }
 
 ?>
-
-
-
-<a href="https://progressbar.tw/posts/173">Switch-case 條件判斷</a>
-<br>
-<a href="13_陣列(矩陣)介紹.php">下一篇</a>
